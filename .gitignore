@@ -17,6 +17,7 @@ node_modules
 
 # misc
 .env
+.DS_Store
 
 # logs
 yarn-debug.log*
