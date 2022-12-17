@@ -27,7 +27,15 @@ const views = () => {
       platform: 'node',
       format: 'esm',
       loader: {
-        '.png': 'file'
+        '.png': 'file',
+        '.svg': 'file',
+        '.jpg': 'file',
+        '.jpeg': 'file',
+        '.webp': 'file',
+        '.mp4': 'file',
+        '.ogg': 'file',
+        '.mp3': 'file',
+        '.wav': 'file'
       },
       define: {
         ...env
