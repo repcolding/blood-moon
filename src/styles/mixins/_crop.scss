@@ -1,0 +1,16 @@
+@mixin crop-line {
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin crop-height ($line) {
+  -webkit-line-clamp: $line;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@mixin crop-height-update ($line) {
+  -webkit-line-clamp: $line;
+}

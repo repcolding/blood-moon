@@ -1,0 +1,9 @@
+@forward 'colors';
+@forward 'media';
+@forward 'col';
+@forward 'env';
+
+// Настройка анимаций в проекте
+$transition-duration: 200ms;
+$transition-timing-function: linear;
+// ---

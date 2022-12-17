@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["*"],
+      "@styles/*": ["/styles/*"],
+      "@modules/*": ["/modules/*"],
+      "@scripts/*": ["/scripts/*"],
+      "@views/*": ["/views/*"]
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "jsxte"
+  }
+}

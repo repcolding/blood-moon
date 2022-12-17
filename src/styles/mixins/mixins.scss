@@ -1,0 +1,17 @@
+@forward 'crop';
+@forward 'fluid';
+@forward 'typ';
+
+@mixin pseudo {
+  display: block;
+  content: '';
+}
+
+@mixin position-fill {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

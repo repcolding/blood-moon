@@ -1,0 +1,9 @@
+/**
+* Данный файл во время компиляции получить все env переменные из фала: <root>/environment.js
+* Описание переменных с дефолтными значениями, для IDE
+*/
+
+$IS_DEV: null !default;
+$IS_PROD: null !default;
+$IS_WATCH: null !default;
+$CDN: null !default;

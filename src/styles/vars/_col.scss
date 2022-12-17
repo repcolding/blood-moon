@@ -1,0 +1,16 @@
+@use 'media' as *;
+
+:root {
+  --col--column: 12;
+  --col--gap: 40px;
+  --col--template: repeat(var(--col--column), 1fr);
+
+  @media (width < $media-1440) {
+    --col--gap: 30px;
+  }
+
+  @media (width < $media-768) {
+    --col--column: 6;
+    --col--gap: 20px;
+  }
+}
