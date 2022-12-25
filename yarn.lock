@@ -231,6 +231,10 @@
     "@types/expect" "^1.20.4"
     "@types/node" "*"
 
+"@verno.digital/moon-block@git+https://github.com/repcolding/moon-block.git":
+  version "1.0.0"
+  resolved "git+https://github.com/repcolding/moon-block.git#af561b34e22af2c4b4cd817262ab0900f82ed07a"
+
 "@verno.digital/newest-css-reset@^2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@verno.digital/newest-css-reset/-/newest-css-reset-2.0.0.tgz#1bd3f4f6f072aa6c7afb12b8e3f521a21d31cc05"
@@ -4445,11 +4449,6 @@ replace-homedir@^1.0.0:
     homedir-polyfill "^1.0.1"
     is-absolute "^1.0.0"
     remove-trailing-separator "^1.1.0"
-
-replace-string@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/replace-string/-/replace-string-4.0.0.tgz#2f7270b3e38d118a00ff328481305561c7fe74cf"
-  integrity sha512-fcgyZ62o26oBaihEC302pZQ2WectvmZ4sGOq4Lwa8ad12lPbhIlZCvLpgpI1sOAsbN83kpXiH5KCcr3pcZa8bA==
 
 require-directory@^2.1.1:
   version "2.1.1"
