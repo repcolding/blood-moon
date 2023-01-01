@@ -57,6 +57,6 @@
   },
   "dependencies": {
     "@verno.digital/moon-block": "git+https://github.com/repcolding/moon-block.git",
-    "@verno.digital/newest-css-reset": "^2.0.0"
+    "@verno.digital/newest-css-reset": "^4.0.5"
   }
 }

@@ -1,0 +1,16 @@
+@use 'media' as *;
+
+:root {
+  --grid-column: 12;
+  --grid-gap: 40px;
+  --grid-template: repeat(var(--col--column), 1fr);
+
+  @media (width < $media-1440) {
+    --grid-gap: 30px;
+  }
+
+  @media (width < $media-768) {
+    --grid-column: 6;
+    --grid-gap: 20px;
+  }
+}

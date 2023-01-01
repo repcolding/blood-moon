@@ -2,11 +2,6 @@
 @forward 'fluid';
 @forward 'typ';
 
-@mixin pseudo {
-  display: block;
-  content: '';
-}
-
 @mixin position-fill {
   top: 0;
   right: 0;

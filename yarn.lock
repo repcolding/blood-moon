@@ -235,10 +235,10 @@
   version "1.0.0"
   resolved "git+https://github.com/repcolding/moon-block.git#af561b34e22af2c4b4cd817262ab0900f82ed07a"
 
-"@verno.digital/newest-css-reset@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@verno.digital/newest-css-reset/-/newest-css-reset-2.0.0.tgz#1bd3f4f6f072aa6c7afb12b8e3f521a21d31cc05"
-  integrity sha512-XFQCMQsINshWwXLfyNVNfxdn7EoUIathvsWbu40zMK2OAp9AVN1BO1hx9nrsQwZZbBoeNS6VV4ziUB9YL3VkeA==
+"@verno.digital/newest-css-reset@^4.0.5":
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/@verno.digital/newest-css-reset/-/newest-css-reset-4.0.5.tgz#43218d9f4df9280199c98e46c6f02369dc57129f"
+  integrity sha512-6OIGCbRPdHhiJKiZJZbMJ/YnKLAO6WvZVAKh+YEkRPl8rVFgi2qVqwYgBRJFyAe52Wsbnu7ZYiwIeamOFwLzog==
 
 "@xmldom/xmldom@^0.8.3":
   version "0.8.6"
