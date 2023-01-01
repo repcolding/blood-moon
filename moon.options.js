@@ -4,7 +4,7 @@ const moonOptions = {
   img: {
     webp: true,
     quantity: 90,
-    quantityWebp: 90,
+    quantityWebp: 90
   }
 }
 
