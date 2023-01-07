@@ -14,3 +14,12 @@ declare const IS_PROD
 declare const IS_WATCH
 declare const SCOPE
 declare const CDN
+
+// Custom tag
+declare namespace JSX {
+  interface IntrinsicElements {
+    use: {
+      href: string
+    }
+  }
+}
