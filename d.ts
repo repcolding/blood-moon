@@ -21,5 +21,8 @@ declare namespace JSX {
     use: {
       href: string
     }
+    br: {
+      class: string
+    }
   }
 }
