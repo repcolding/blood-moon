@@ -1,6 +1,6 @@
-const correctNumber = number => (number < 10 ? '0' + number : number)
+const correctNumber = (number) => (number < 10 ? '0' + number : number)
 
-function timestamp () {
+function timestamp() {
   const now = new Date()
   const year = now.getFullYear()
   const month = correctNumber(now.getMonth() + 1)
@@ -11,6 +11,4 @@ function timestamp () {
   return `(${year}.${month}.${day} ${hours}:${minutes})`
 }
 
-export {
-  timestamp
-}
+export { timestamp }

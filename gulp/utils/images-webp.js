@@ -9,10 +9,8 @@ const plugins = [
   })
 ]
 
-function imagesWebp () {
+function imagesWebp() {
   return min(plugins)
 }
 
-export {
-  imagesWebp
-}
+export { imagesWebp }

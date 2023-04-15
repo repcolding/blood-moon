@@ -1,10 +1,5 @@
 import { env } from '../../environment.js'
 
-const filterScope =
-  env.SCOPE === false
-    ? '!robots.txt'
-    : false
+const filterScope = env.SCOPE === false ? '!robots.txt' : false
 
-export {
-  filterScope
-}
+export { filterScope }

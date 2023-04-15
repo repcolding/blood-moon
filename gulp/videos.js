@@ -4,18 +4,12 @@ import cached from 'gulp-cached'
 import { renameMedia } from './utils/reneme-media.js'
 import { options } from './config/options.js'
 
-const {
-  src,
-  dest
-} = gulp
+const { src, dest } = gulp
 
 const globalVideos = 'assets/videos/**/*.{mp4,webm,ogg}'
 const modulesVideos = 'modules/*/assets/**/*.{mp4,webm,ogg}'
 
-const glob = [
-  globalVideos,
-  modulesVideos
-]
+const glob = [globalVideos, modulesVideos]
 
 const videos = () => {
   return src(glob, { ...options.src })
@@ -24,6 +18,4 @@ const videos = () => {
     .pipe(dest('.', { ...options.dest }))
 }
 
-export {
-  videos
-}
+export { videos }

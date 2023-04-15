@@ -8,9 +8,9 @@ import { projectName } from '../utils/project-name.js'
 
 const iconError = join(cwd, 'gulp/icons/moon.png')
 
-function plumber () {
+function plumber() {
   return gulpPlumber({
-    errorHandler (error) {
+    errorHandler(error) {
       const { name, plugin, message } = error
       const title = `${chalk.red(name)} in ${chalk.cyan(plugin)}`
 
@@ -30,6 +30,4 @@ function plumber () {
   })
 }
 
-export {
-  plumber
-}
+export { plumber }

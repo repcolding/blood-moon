@@ -1,15 +1,13 @@
 import { renderToHtml } from 'jsxte'
 
-function routing (listPages) {
+function routing(listPages) {
   const obj = {}
 
   for (const page of listPages) {
-    obj[page.tag.name.toLowerCase()] = renderToHtml(page)
+    obj[page.path] = renderToHtml(page.component)
   }
 
   return obj
 }
 
-export {
-  routing
-}
+export { routing }

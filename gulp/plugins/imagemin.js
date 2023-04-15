@@ -18,10 +18,8 @@ const plugins = [
   })
 ]
 
-function imagemin () {
+function imagemin() {
   return min(plugins)
 }
 
-export {
-  imagemin
-}
+export { imagemin }

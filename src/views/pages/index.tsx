@@ -1,11 +1,7 @@
 import { Main } from '@/views/_/main'
 
 const Index = () => {
-  return (
-    <Main></Main>
-  )
+  return <Main></Main>
 }
 
-export {
-  Index
-}
+export { Index }

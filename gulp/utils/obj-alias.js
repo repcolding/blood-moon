@@ -3,9 +3,7 @@ import { readFileSync } from 'fs'
 import { cwd } from './cwd.js'
 
 const compilerOptions = JSON.parse(
-  readFileSync(join(
-    cwd, 'tsconfig.json')
-  ).toString()
+  readFileSync(join(cwd, 'tsconfig.json')).toString()
 )
 
 function getAlias() {

@@ -1,11 +1,10 @@
 {
   "name": "@verno.digital/blood-moon",
   "version": "2.0.0",
-  "description": "GULP + ESBUILD = BEM, TSX, TS, SCSS, POSTCSS, JS - Frontend MPA",
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "start": "gulp start --watch --dev --enable-source-maps",
+    "start": "gulp start --serve --dev --enable-source-maps",
     "build:dev": "gulp build --dev --enable-source-maps",
     "build:prod": "gulp build --prod --enable-source-maps",
     "archive": "gulp archive --scope",
@@ -14,10 +13,7 @@
     "deploy:prod": "gulp deploy"
   },
   "keywords": [
-    "BEM architecture",
-    "Layout frontend",
-    "TSX to HTML",
-    "@verno.digital lib"
+    "@verno.digital"
   ],
   "repository": {
     "type": "git",
@@ -48,6 +44,7 @@
     "node-notifier": "^10.0.1",
     "postcss": "^8.4.19",
     "postcss-media-minmax": "^5.0.0",
+    "prettier": "^2.8.7",
     "temp-write": "^5.0.0",
     "through2": "^4.0.2",
     "unique-string": "^3.0.0",
@@ -56,7 +53,7 @@
     "yargs": "^17.6.2"
   },
   "dependencies": {
-    "@verno.digital/moon-block": "git+https://github.com/repcolding/moon-block.git",
-    "@verno.digital/newest-css-reset": "^4.0.5"
+    "@verno.digital/moon-block": "^1.2.1",
+    "@verno.digital/newest-css-reset": "^4.2.0"
   }
 }

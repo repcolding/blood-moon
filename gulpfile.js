@@ -14,14 +14,12 @@ import { serve } from './gulp/serve.js'
 import { archive } from './gulp/archive.js'
 import { deploy } from './gulp/deploy.js'
 
-const {
-  parallel,
-  series
-} = gulp
+const { parallel, series } = gulp
 
-const build = series(cleanup, parallel(
-  views, scripts, styles, icons, images, videos, fonts, files
-))
+const build = series(
+  cleanup,
+  parallel(views, scripts, styles, icons, images, videos, fonts, files)
+)
 
 const start = series(build, serve)
 

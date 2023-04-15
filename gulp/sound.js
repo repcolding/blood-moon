@@ -4,18 +4,12 @@ import cached from 'gulp-cached'
 import { renameMedia } from './utils/reneme-media.js'
 import { options } from './config/options.js'
 
-const {
-  src,
-  dest
-} = gulp
+const { src, dest } = gulp
 
 const globalSound = 'assets/sound/**/*.{mp3,wav,ogg}'
-const modulesSound= 'modules/*/assets/**/*.{mp3,wav,ogg}'
+const modulesSound = 'modules/*/assets/**/*.{mp3,wav,ogg}'
 
-const glob = [
-  globalSound,
-  modulesSound
-]
+const glob = [globalSound, modulesSound]
 
 const sound = () => {
   return src(glob, { ...options.src })
@@ -24,6 +18,4 @@ const sound = () => {
     .pipe(dest('.', { ...options.dest }))
 }
 
-export {
-  sound
-}
+export { sound }

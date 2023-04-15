@@ -12,17 +12,14 @@ import { files } from './files.js'
 import { icons } from './icons.js'
 import { fonts } from './fonts.js'
 
-const {
-  watch,
-  series
-} = gulp
+const { watch, series } = gulp
 
-const readyReload = cb => {
+const readyReload = (cb) => {
   browserSync.reload()
   cb()
 }
 
-const serve = cb => {
+const serve = (cb) => {
   browserSync.init({
     server: {
       baseDir: options.dest.cwd,
@@ -48,6 +45,4 @@ const serve = cb => {
   cb()
 }
 
-export {
-  serve
-}
+export { serve }

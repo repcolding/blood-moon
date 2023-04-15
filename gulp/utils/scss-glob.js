@@ -1,4 +1,5 @@
 import fg from 'fast-glob'
+import { sep } from 'path'
 
 const regex = /@?use + ?((\w+) +from )?([\'\"])(.*?);?\3/gm
 const importSass = /@use +([\'\"])(.*?)\1/gm
@@ -12,7 +13,7 @@ const replacer = (match, fromStatement, obj, quote, filename, pathname) => {
 
   const globRelativePath = filename.match(/!?([^!]*)$/)[1]
   const prefix = filename.replace(globRelativePath, '')
-  const cwdPath = pathname.substring(0, pathname.lastIndexOf('/'))
+  const cwdPath = pathname.substring(0, pathname.lastIndexOf(sep))
 
   const result = fg
     .sync(globRelativePath, { cwd: cwdPath })
@@ -40,7 +41,10 @@ const replacer = (match, fromStatement, obj, quote, filename, pathname) => {
 }
 
 export const scssGlob = (content, pathname) => {
-  return content.replace(regex, (match, fromStatement, obj, quote, filename) => {
+  return content.replace(
+    regex,
+    (match, fromStatement, obj, quote, filename) => {
       return replacer(match, fromStatement, obj, quote, filename, pathname)
-  })
+    }
+  )
 }

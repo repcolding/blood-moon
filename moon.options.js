@@ -8,6 +8,4 @@ const moonOptions = {
   }
 }
 
-export {
-  moonOptions
-}
+export { moonOptions }

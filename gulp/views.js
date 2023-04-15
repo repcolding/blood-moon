@@ -8,10 +8,7 @@ import { plumber } from './plugins/plumber.js'
 import { env } from '../environment.js'
 import { assetsManager } from './plugins/assets-manager.js'
 
-const {
-  src,
-  dest
-} = gulp
+const { src, dest } = gulp
 
 const esbuild = createGulpEsbuild({
   incremental: env.IS_WATCH
@@ -20,33 +17,33 @@ const esbuild = createGulpEsbuild({
 const views = () => {
   return src('views/routing.tsx', { ...options.src })
     .pipe(plumber())
-    .pipe(esbuild({
-      bundle: true,
-      sourcemap: 'inline',
-      sourceRoot: join(cwd, '/'),
-      platform: 'node',
-      format: 'esm',
-      loader: {
-        '.png': 'file',
-        '.svg': 'file',
-        '.jpg': 'file',
-        '.jpeg': 'file',
-        '.webp': 'file',
-        '.mp4': 'file',
-        '.ogg': 'file',
-        '.mp3': 'file',
-        '.wav': 'file'
-      },
-      define: {
-        ...env
-      },
-      assetNames: '[dir]/[name]'
-    }))
+    .pipe(
+      esbuild({
+        bundle: true,
+        sourcemap: 'inline',
+        sourceRoot: join(cwd, '/'),
+        platform: 'node',
+        format: 'esm',
+        loader: {
+          '.png': 'file',
+          '.svg': 'file',
+          '.jpg': 'file',
+          '.jpeg': 'file',
+          '.webp': 'file',
+          '.mp4': 'file',
+          '.ogg': 'file',
+          '.mp3': 'file',
+          '.wav': 'file'
+        },
+        define: {
+          ...env
+        },
+        assetNames: '[dir]/[name]'
+      })
+    )
     .pipe(vinylHtml())
     .pipe(assetsManager())
     .pipe(dest('.', { ...options.dest }))
 }
 
-export {
-  views
-}
+export { views }

@@ -8,10 +8,7 @@ import { plumber } from './plugins/plumber.js'
 import { env } from '../environment.js'
 import { scssPrecompile } from './utils/scss-precompile.js'
 
-const {
-  src,
-  dest
-} = gulp
+const { src, dest } = gulp
 
 const esbuild = createGulpEsbuild({
   incremental: env.IS_WATCH
@@ -20,25 +17,29 @@ const esbuild = createGulpEsbuild({
 const styles = () => {
   return src('styles/styles.scss', { ...options.src })
     .pipe(plumber())
-    .pipe(esbuild({
-      outfile: 'styles.css',
-      sourcemap: env.IS_DEV,
-      minify: env.IS_PROD,
-      loader: {
-        '.png': 'file'
-      },
-      plugins: [
-        sassPlugin({
-          transform: scssPostcss,
-          importMapper: scssAlias,
-          precompile: scssPrecompile
-        })
-      ],
-      assetNames: '[dir]/[name]-[hash]',
-    }))
+    .pipe(
+      esbuild({
+        outfile: 'styles.css',
+        sourcemap: env.IS_DEV,
+        minify: env.IS_PROD,
+        loader: {
+          '.png': 'file',
+          '.svg': 'file',
+          '.jpg': 'file',
+          '.jpeg': 'file',
+          '.webp': 'file'
+        },
+        plugins: [
+          sassPlugin({
+            transform: scssPostcss,
+            importMapper: scssAlias,
+            precompile: scssPrecompile
+          })
+        ],
+        assetNames: '[dir]/[name]-[hash]'
+      })
+    )
     .pipe(dest('css', { ...options.dest }))
 }
 
-export {
-  styles
-}
+export { styles }

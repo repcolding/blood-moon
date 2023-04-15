@@ -1,16 +1,14 @@
 import micromatch from 'micromatch'
 import { sep, join } from 'path'
 
-const clearDirModule = dirname => {
+const clearDirModule = (dirname) => {
   return dirname.replace(`${sep}assets`, '')
 }
 
-const getPathGlob = ({path, cwd}) => {
+const getPathGlob = ({ path, cwd }) => {
   const cwdFolder = join(cwd, sep)
 
-  return path.slice(
-    path.indexOf(cwdFolder) + cwdFolder.length
-  )
+  return path.slice(path.indexOf(cwdFolder) + cwdFolder.length)
 }
 
 const renameMedia = (glob, folder) => {
@@ -25,6 +23,4 @@ const renameMedia = (glob, folder) => {
   }
 }
 
-export {
-  renameMedia
-}
+export { renameMedia }

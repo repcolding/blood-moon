@@ -4,25 +4,19 @@ import _if from 'gulp-if'
 import cached from 'gulp-cached'
 import { options } from './config/options.js'
 import { plumber } from './plugins/plumber.js'
-import { renameMedia } from "./utils/reneme-media.js";
+import { renameMedia } from './utils/reneme-media.js'
 import { imagemin } from './plugins/imagemin.js'
 import { env } from '../environment.js'
 import { imageOptions } from './config/images.js'
 import { imagesWebp } from './utils/images-webp.js'
 import { imagesRenameWebp } from './utils/images-rename-webp.js'
 
-const {
-  src,
-  dest
-} = gulp
+const { src, dest } = gulp
 
 const globalImages = 'assets/images/**/*.{svg,png,jpeg,jpg}'
 const modulesImages = 'modules/*/assets/**/*.{svg,png,jpeg,jpg}'
 
-const glob = [
-  globalImages,
-  modulesImages
-]
+const glob = [globalImages, modulesImages]
 
 const images = () => {
   return src(glob, { ...options.src })
@@ -36,6 +30,4 @@ const images = () => {
     .pipe(_if(imageOptions.webp, dest('.', { ...options.dest })))
 }
 
-export {
-  images
-}
+export { images }
