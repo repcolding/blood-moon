@@ -35,9 +35,9 @@ const addVarsEnv = (source, pathname) => {
 }
 
 const scssPrecompile = (source, pathname, isRoot) => {
-  let updateSource
+  let updateSource = source
 
-  updateSource = scssGlob(source, pathname)
+  updateSource = scssGlob(updateSource, pathname)
   updateSource = assetsManagerScss(updateSource, pathname)
   updateSource = addVarsEnv(updateSource, pathname)
 

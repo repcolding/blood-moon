@@ -7,11 +7,12 @@ import { scssAlias } from './utils/scss-alias.js'
 import { plumber } from './plugins/plumber.js'
 import { env } from '../environment.js'
 import { scssPrecompile } from './utils/scss-precompile.js'
+import { convertObjValues } from "./utils/convert-obj-values.js";
 
 const { src, dest } = gulp
 
 const esbuild = createGulpEsbuild({
-  incremental: env.IS_WATCH
+  incremental: false
 })
 
 const styles = () => {
@@ -36,7 +37,8 @@ const styles = () => {
             precompile: scssPrecompile
           })
         ],
-        assetNames: '[dir]/[name]-[hash]'
+        assetNames: '[dir]/[name]-[hash]',
+        define: convertObjValues(env)
       })
     )
     .pipe(dest('css', { ...options.dest }))

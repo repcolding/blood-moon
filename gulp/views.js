@@ -7,6 +7,7 @@ import { cwd } from './utils/cwd.js'
 import { plumber } from './plugins/plumber.js'
 import { env } from '../environment.js'
 import { assetsManager } from './plugins/assets-manager.js'
+import { convertObjValues } from "./utils/convert-obj-values.js";
 
 const { src, dest } = gulp
 
@@ -35,9 +36,7 @@ const views = () => {
           '.mp3': 'file',
           '.wav': 'file'
         },
-        define: {
-          ...env
-        },
+        define: convertObjValues(env),
         assetNames: '[dir]/[name]'
       })
     )

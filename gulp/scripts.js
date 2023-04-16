@@ -3,10 +3,9 @@ import { options } from './config/options.js'
 import { createGulpEsbuild } from 'gulp-esbuild'
 import { plumber } from './plugins/plumber.js'
 import { env } from '../environment.js'
+import { convertObjValues } from "./utils/convert-obj-values.js";
 
 const { src, dest } = gulp
-
-dest.from = ''
 
 const esbuild = createGulpEsbuild({
   incremental: env.IS_WATCH
@@ -23,9 +22,7 @@ const scripts = () => {
         sourcemap: env.IS_DEV,
         splitting: true,
         chunkNames: '[hash]',
-        define: {
-          ...env
-        }
+        define: convertObjValues(env)
       })
     )
     .pipe(dest('js', { ...options.dest }))
